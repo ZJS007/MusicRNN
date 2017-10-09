@@ -42,8 +42,8 @@ sample\_from\_model should be set to be equal to the name of the model you want 
 sample\_dir and sample\_name are simply dir and name of the .mid file wich will be created.   
 mu and sigma are used to tell the model the degree of confidence it should have in playing a note before actually playing it.   
 
-_Basically how it is made is we take A a realization of the Normal distribution of parameters mu and sigma, and at each step, we        perfom weighted choice in the vector of probabilities given by our network at the power of A and normalized so it sums to 1. Since      this is a probability vector, we have the following properties :   
+*Basically how it is made is we take A a realization of the Normal distribution of parameters mu and sigma, and at each step, we        perfom weighted choice in the vector of probabilities given by our network at the power of A and normalized so it sums to 1. Since      this is a probability vector, we have the following properties :   
 * if A = 1, the vector remain the same, so we can interpret that as 'vanilla' sampling   
 * if A < 1, difference between low value and high value will be lowered, wich can be interpreted as lowering the threshold of          confidence the network must have to play a note  
 * if A > 1, difference between low value and high value will be upped, wich can be interpreted as uping the threshold of             confidence the network must have to play a note
-_
+
