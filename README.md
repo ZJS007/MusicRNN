@@ -4,11 +4,11 @@ LSTM-RNN for Music Generation based on Tensorflow
 # WORK IN PROGRESS
 
 # I'll list all references later, but the main ones are :
-• Karpathy's char-rnn https://github.com/karpathy/char-rnn
-• Tensroflow char-rnn https://github.com/sherjilozair/char-rnn-tensorflow
-• Hexahedria Recurent neural network for music http://www.hexahedria.com/2015/08/03/composing-music-with-recurrent-neural-networks/
+• Karpathy's char-rnn https://github.com/karpathy/char-rnn  
+• Tensroflow char-rnn https://github.com/sherjilozair/char-rnn-tensorflow  
+• Hexahedria Recurent neural network for music http://www.hexahedria.com/2015/08/03/composing-music-with-recurrent-neural-networks/  
 
-### I'll try to use high level music format to train the system. The format i'll use will probably be the ASCII Musical Notation (AMN) wich is a new format developped by the Laboratoire Bordelais de Recherche en Informatique and the Conservatoire de Bordeaux.  
+### I'll try to use high level music format to train the system.  The format i'll use will probably be the ASCII Musical Notation (AMN) wich is a new format developped by the Laboratoire Bordelais de Recherche en Informatique and the Conservatoire de Bordeaux.  
 
 # How to USE
 
