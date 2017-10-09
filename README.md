@@ -8,7 +8,7 @@
 * Tensroflow char-rnn https://github.com/sherjilozair/char-rnn-tensorflow;
 * Hexahedria Recurent neural network for music http://www.hexahedria.com/2015/08/03/composing-music-with-recurrent-neural-networks/ . 
 
-### I'll try to use high level music format to train the system.  The format i'll use will probably be the ASCII Musical Notation (AMN) wich is a new format developped by the _Laboratoire Bordelais de Recherche en Informatique_ and the _Conservatoire de Bordeaux_.  
+### I'll try to use high level music format to train the network. The format i'll use will probably be the ASCII Musical Notation (AMN) wich is a new format developped by the _Laboratoire Bordelais de Recherche en Informatique_ and the _Conservatoire de Bordeaux_.  
 
 # How to USE
 
