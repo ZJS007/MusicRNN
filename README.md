@@ -1,5 +1,5 @@
 # MusicRNN
-LSTM-RNN for Music Generation based on Tensorflow and Python
+## LSTM-RNN for Music Generation based on Tensorflow and Python
 
 # WORK IN PROGRESS
 
@@ -19,10 +19,10 @@ LSTM-RNN for Music Generation based on Tensorflow and Python
 * tensorflow for python 3.5+ https://www.tensorflow.org  
 
 #### Step 1
-Fill midis folder wither FOLDER(S) containaing .mid or .MID files with a constant BPM of 120 (if you don’t know what BPM is .. it’s ok)
+Fill __midis__ folder wither FOLDER(S) containaing .mid or .MID files with a constant BPM of 120 (if you don’t know what BPM is .. it’s ok)
 
 #### Step 2
-Then (you can) check if your midis are at 120 BPM and that notes are in the right interval by running check_all_midis.py
+Then (you can) check if your midis are at 120 BPM and that notes are in the right interval by running __check\_all\_midis.py__
 
 #### Step 3
 Now you will modify the config.ini file for the training phase:  
