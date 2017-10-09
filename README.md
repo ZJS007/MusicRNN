@@ -4,9 +4,9 @@ LSTM-RNN for Music Generation based on Tensorflow
 # WORK IN PROGRESS
 
 # I'll list all references later, but the main ones are :
-• Karpathy's char-rnn https://github.com/karpathy/char-rnn  
-• Tensroflow char-rnn https://github.com/sherjilozair/char-rnn-tensorflow  
-• Hexahedria Recurent neural network for music http://www.hexahedria.com/2015/08/03/composing-music-with-recurrent-neural-networks/  
+* Karpathy's char-rnn https://github.com/karpathy/char-rnn  
+* Tensroflow char-rnn https://github.com/sherjilozair/char-rnn-tensorflow  
+* Hexahedria Recurent neural network for music http://www.hexahedria.com/2015/08/03/composing-music-with-recurrent-neural-networks/  
 
 ### I'll try to use high level music format to train the system.  The format i'll use will probably be the ASCII Musical Notation (AMN) wich is a new format developped by the _Laboratoire Bordelais de Recherche en Informatique_ and the _Conservatoire de Bordeaux_.  
 
@@ -14,9 +14,9 @@ LSTM-RNN for Music Generation based on Tensorflow
 
 ### Dependecies
 
-• mido library https://pypi.python.org/pypi/mido;  
-• numpy for python 3.5+ http://www.numpy.org/;  
-• tensorflow for python 3.5+ https://www.tensorflow.org  
+* mido library https://pypi.python.org/pypi/mido;  
+* numpy for python 3.5+ http://www.numpy.org/;  
+* tensorflow for python 3.5+ https://www.tensorflow.org  
 
 ##### Step 1
 Fill midis folder wither FOLDER(S) containaing .mid or .MID files with a constant BPM of 120 (if you don’t know what BPM is .. it’s ok)
@@ -41,7 +41,7 @@ With first\_chars you can force the model to play some note of your choice by en
 sample\_from\_model should be set to be equal to the name of the model you want to sample from (the name you gave with model\_save\_name in training phase.   
 sample\_dir and sample\_name are simply dir and name of the .mid file wich will be created.   
 mu and sigma are used to tell the model the degree of confidence it should have in playing a note before actually playing it.   
-    [  Basically how it is made is we take A a realization of the Normal distribution of parameters mu and sigma, and at each step, we        perfom weighted choice in the vector of probabilities given by our network at the power of A and normalized so it sums to 1. Since      this is a probability vector, we have the following properties :   
-      -  if A = 1, the vector remain the same, so we can interpret that as 'vanilla' sampling   
-      -  if A < 1, difference between low value and high value will be lowered, wich can be interpreted as lowering the threshold of          confidence the network must have to play a note  
-      -  if A > 1, difference between low value and high value will be upped, wich can be interpreted as uping the threshold of             confidence the network must have to play a note  ] 
+Basically how it is made is we take A a realization of the Normal distribution of parameters mu and sigma, and at each step, we        perfom weighted choice in the vector of probabilities given by our network at the power of A and normalized so it sums to 1. Since      this is a probability vector, we have the following properties :   
+* if A = 1, the vector remain the same, so we can interpret that as 'vanilla' sampling   
+* if A < 1, difference between low value and high value will be lowered, wich can be interpreted as lowering the threshold of          confidence the network must have to play a note  
+* if A > 1, difference between low value and high value will be upped, wich can be interpreted as uping the threshold of             confidence the network must have to play a note  
