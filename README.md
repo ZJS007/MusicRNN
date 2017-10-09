@@ -8,15 +8,15 @@ LSTM-RNN for Music Generation based on Tensorflow
 • Tensroflow char-rnn https://github.com/sherjilozair/char-rnn-tensorflow
 • Hexahedria Recurent neural network for music http://www.hexahedria.com/2015/08/03/composing-music-with-recurrent-neural-networks/
 
-### I'll try to use high level music format to train the system. The format i'll use will probably be the ASCII Musical Notation (AMN) wich is a new format developped by the Laboratoire Bordelais de Recherche en Informatique and the Conservatoire de Bordeaux.
+### I'll try to use high level music format to train the system. The format i'll use will probably be the ASCII Musical Notation (AMN) wich is a new format developped by the Laboratoire Bordelais de Recherche en Informatique and the Conservatoire de Bordeaux.  
 
 # How to USE
 
 ### Dependecies
 
-• mido library https://pypi.python.org/pypi/mido;
-• numpy for python 3.5+ http://www.numpy.org/;
-• tensorflow for python 3.5+ https://www.tensorflow.org
+• mido library https://pypi.python.org/pypi/mido;  
+• numpy for python 3.5+ http://www.numpy.org/;  
+• tensorflow for python 3.5+ https://www.tensorflow.org  
 
 ##### Step 1
 Fill midis folder wither FOLDER(S) containaing .mid or .MID files with a constant BPM of 120 (if you don’t know what BPM is .. it’s ok);
