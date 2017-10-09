@@ -35,13 +35,13 @@ folder\_name\_list must contain name of the folder(s) containing your midi files
 You can then run train.py wich will automatically turn your midi files into txt data files and then start the training, following your instructions given in config.ini
 
 ##### Step 5
-Now you will modify the config.ini file for the sample phase:  
-In SAMPLE\_PARAMETERS, n is the time your sample will last, in seconds.  
-With first\_chars you can force the model to play some note of your choice by enterring the starting characters you want.  
-sample\_from\_model should be set to be equal to the name of the model you want to sample from (the name you gave with model\_save\_name in training phase.  
-sample\_dir and sample\_name are simply dir and name of the .mid file wich will be created.  
-mu and sigma are used to tell the model the degree of confidence it should have in playing a note before actually playing it.  
-[  Basically how it is made is we take A a realization of the Normal distribution of parameters mu and sigma, and at each step, we perfom weighted choice in the vector of probabilities given by our network at the power of A and normalized so it sums to 1. Since this is a probability vector, we have the following properties :   
-  -  if A = 1, the vector remain the same, so we can interpret that as 'vanilla' sampling  
-  -  if A < 1, difference between low value and high value will be lowered, wich can be interpreted as lowering the threshold of confidence the network must have to play a note  
-  -  if A > 1, difference between low value and high value will be upped, wich can be interpreted as uping the threshold of confidence the network must have to play a note  ] 
+Now you will modify the config.ini file for the sample phase:   
+In SAMPLE\_PARAMETERS, n is the time your sample will last, in seconds.   
+With first\_chars you can force the model to play some note of your choice by enterring the starting characters you want.   
+sample\_from\_model should be set to be equal to the name of the model you want to sample from (the name you gave with model\_save\_name in training phase.   
+sample\_dir and sample\_name are simply dir and name of the .mid file wich will be created.   
+mu and sigma are used to tell the model the degree of confidence it should have in playing a note before actually playing it.   
+    [  Basically how it is made is we take A a realization of the Normal distribution of parameters mu and sigma, and at each step, we        perfom weighted choice in the vector of probabilities given by our network at the power of A and normalized so it sums to 1. Since      this is a probability vector, we have the following properties :   
+      -  if A = 1, the vector remain the same, so we can interpret that as 'vanilla' sampling   
+      -  if A < 1, difference between low value and high value will be lowered, wich can be interpreted as lowering the threshold of          confidence the network must have to play a note  
+      -  if A > 1, difference between low value and high value will be upped, wich can be interpreted as uping the threshold of             confidence the network must have to play a note  ] 
