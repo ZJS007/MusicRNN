@@ -55,7 +55,7 @@ Most likely, you'll find your .mid file in the sample folder, and it will be nam
 If you want to be sure that the phase .mid -> .txt is working, you can turn all your data to .txt by running read\_all function of the MusicLoader class in the midi\_interaction.py file, and then re-turn this .txt files into midi by running to\_midi\_all of the same object. .mid files will be find in re\_transformd\_midi folder.
 
 
-## To come later :
+# To come later :
 ## Theory
 #### Artificial Neural Networks
 #### Recurent neural networks and LSTM
