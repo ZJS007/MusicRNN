@@ -58,7 +58,7 @@ If you want to be sure that the phase .mid -> .txt is working, you can turn all 
 # To come later :
 ## Theory
 #### Artificial Neural Networks
-#### Recurent neural networks and LSTM
+#### Recurent neural networks, LSTM and seq2seq model
 #### Music Format
 #### A little bit of maths behind it (at least what I understand)
 #### Global architecture
