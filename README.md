@@ -37,12 +37,12 @@ You can then run __train.py__ wich will automatically turn your midi files into 
 #### Step 5
 Now you will modify the __config.ini__ file for the sample phase:   
 In __SAMPLE\_PARAMETERS__, __n__ is the time your sample will last, in seconds.   
-With __first\_chars__ you can force the model to play some note of your choice by enterring the starting characters you want.   
+With __first\_chars__ you can force the model to play some notes of your choice by enterring the starting characters you want.   
 __sample\_from\_model__ should be set to be equal to the name of the model you want to sample from (the name you gave with __model\_save\_name__ in training phase.   
 __sample\_dir__ and __sample\_name__ are simply dir and name of the .mid file wich will be created.   
 __mu__ and __sigma__ are used to tell the model the degree of confidence it should have in playing a note before actually playing it.   
 
-Basically how it is made is we take A a realization of the Normal distribution of parameters mu and sigma, and at each step, we        perfom weighted choice in the vector of probabilities given by our network at the power of A and normalized so it sums to 1. Since      this is a probability vector, we have the following properties :   
+Basically how it is made is we take A a realization of the Normal distribution of parameters mu and sigma, and at each step, we        perfom weighted choice in the vector of probabilities given by our network at the power of A and normalized it so it sums to 1. Since this is a probability vector, we have the following properties :   
 * if A = 1, the vector remain the same, so we can interpret that as 'vanilla' sampling;   
 * if A < 1, difference between low value and high value will be lowered, wich can be interpreted as lowering the threshold of          confidence the network must have to play a note;    
 * if A > 1, difference between low value and high value will be upped, wich can be interpreted as uping the threshold of             confidence the network must have to play a note.
