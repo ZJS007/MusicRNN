@@ -11,6 +11,7 @@ class MusicLoader(object):
         self.span = self.upperbound-self.lowerbound + 1
 
     def to_text_from_midi(self, midifile):
+        """ Take midifile and return its .txt representation """
         matrix = self.to_matrix_from_midi(midifile)
         if matrix == None : 
             return None
@@ -29,6 +30,7 @@ class MusicLoader(object):
         return txt
 
     def get_tracks_with(self, pattern, evt_type):
+        """ return a list of tracks containing a certain type of event """
         tracks = []
         for track in pattern.tracks:
             for evt in track:
@@ -40,6 +42,7 @@ class MusicLoader(object):
     def to_midi_from_text(self, textfile,
                           name = sample_params.sample_name,
                           dir_ = sample_params.sample_dir):
+        """ Take .txt file, save .mid file corresponding """
         print('Turning %s into midi ..' % textfile, end= ' ')
         text = open(textfile, 'r').read()
         matrix = []
@@ -54,10 +57,12 @@ class MusicLoader(object):
     def save_midi_file(self, midipattern,
                        name = sample_params.sample_name,
                        dir_ = sample_params.sample_dir):
+        """ Save midi file """
         midipattern.save("%s/%s.mid"%(dir_, 
                                          name))
 
     def to_matrix_from_midi(self, midifile):
+        """ .mid file into matrix representation """
         pattern = mido.MidiFile(midifile)
         tracks = self.get_tracks_with(pattern, 'note_on')
 
@@ -98,6 +103,7 @@ class MusicLoader(object):
         return fusion_matrix
         
     def to_midi_from_matrix(self, matrix):
+        """ matrix representation into midi file """
         
         matrix_prev = [[0 for _ in range(self.span)]] + matrix[:-1]
         
@@ -124,13 +130,16 @@ class MusicLoader(object):
         return pattern
 
     def add_note_off_event(self, track, tick, pitch):
+        """ Add a note off event to track"""
         track.append(mido.Message('note_off', note=pitch, velocity=127, time=tick))
                                           
     def add_note_on_event(self, track, tick, pitch):
+        """ Add a note on event to track """
         track.append(mido.Message('note_on', note=pitch, velocity=50, time=tick))
         
 
     def read_all(self):
+        """ read all midi files in midis folder and turn them to .txt stored in data folder """
         if model_params.midis_folder_name_list == 'all':
             model_params.midis_folder_name_list = os.listdir('midis')
         n = 0
@@ -150,11 +159,13 @@ class MusicLoader(object):
         print('Done !')
         
     def to_midi_all(self):
+        """ Turn all .txt in data into midi files, stored in re_transformed_midi """
         for name in os.listdir('data'):
             if name[-4:] == '.txt':
                 self.to_midi_from_text('data/'+name, name = name[:-4], dir_ = 're_transformed_midi')
 
     def check_if_pattern_is_ok(self, pattern, tempo):
+        """ Check if a pattern has right tempo and no change in tempo during time """
         for track in pattern.tracks:
             for evt in track:
                 if evt.type == 'set_tempo':
@@ -166,6 +177,7 @@ class MusicLoader(object):
         return True
 
     def check_all_midi(self):
+        """ check all midi files to find if they have good tempo and no change in tempo during time """
         n = 0
         for folder in os.listdir('midis'):
             n += len(os.listdir('midis/'+folder))
@@ -188,6 +200,7 @@ class MusicLoader(object):
         print('Done !')
 
     def clear_data(self):
+        """ Clear all .txt in data """
         print('Clearing data ..')
         for name in os.listdir('data'):
             os.remove('data/'+name)
