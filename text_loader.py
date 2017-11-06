@@ -11,6 +11,7 @@ class TextLoader():
         self.reset_batch_pointer()
 
     def create_batches(self):
+        """ Create all batches """
         self.n_batches = int(len(self.all_data) / (self.batch_size *
                                                      self.seq_size))
         data = list(self.all_data[:self.n_batches * self.batch_size *
@@ -25,9 +26,11 @@ class TextLoader():
                                self.n_batches, 1)
 
     def get_next_batch(self):
+        """ get next batch according to the pointer """
         data, target = self.data[self.pointer], self.target[self.pointer]
         self.pointer += 1
         return data, target
 
     def reset_batch_pointer(self):
+        """ set the pointer to be 0 (reset) """
         self.pointer = 0
