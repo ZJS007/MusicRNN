@@ -63,4 +63,5 @@ If you want to be sure that the phase .mid -> .txt is working, you can turn all 
 #### A little bit of maths behind it (at least what I understand)
 #### Global architecture
 ## Results
+You can already download some files created by the network, they are in the sample folder
 ## Aditionnal Comments, Discussion
