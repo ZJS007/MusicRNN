@@ -64,6 +64,7 @@ If you want to be sure that the phase .mid -> .txt is working, you can turn all 
 #### Global architecture
 ## Results
 You can already download some files created by the network, they are in the sample folder.
+
 __What it looks like without any training__ :
 ![alt tag](https://user-images.githubusercontent.com/27825602/33525950-2cbf3e6c-d839-11e7-8b0b-2eb544ab80b2.JPG)
 
