@@ -65,11 +65,12 @@ If you want to be sure that the phase .mid -> .txt is working, you can turn all 
 ## Results
 You can already download some files created by the network, they are in the sample folder.
 __What it looks like without any training__ :
-![alt tag](https://user-images.githubusercontent.com/27825602/33525949-2aaf89ba-d839-11e7-8772-60bead4952d3.JPG)
+![alt tag](https://user-images.githubusercontent.com/27825602/33525950-2cbf3e6c-d839-11e7-8b0b-2eb544ab80b2.JPG)
 
 __Now when trained with classical music from Byrd__:
 ![alt tag](https://user-images.githubusercontent.com/27825602/33525946-27984ba4-d839-11e7-9596-df07ca42b51b.JPG)
 
 __And now whith some mix of various classical and contemporary composers__:
-![alt tag](https://user-images.githubusercontent.com/27825602/33525950-2cbf3e6c-d839-11e7-8b0b-2eb544ab80b2.JPG)
+![alt tag](https://user-images.githubusercontent.com/27825602/33525949-2aaf89ba-d839-11e7-8772-60bead4952d3.JPG)
+
 ## Aditionnal Comments, Discussion
